@@ -80,8 +80,8 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}});
 
-                    Intent intent = new Intent(getApplicationContext(), finalpage.class);
-                    startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), finalpage.class);
+                startActivity(intent);
 
                 Bundle b=new Bundle();
                 b.putString("spinnerville",spinnerville.toString());
