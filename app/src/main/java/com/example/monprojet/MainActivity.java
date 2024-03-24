@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -26,12 +28,19 @@ public class MainActivity extends AppCompatActivity {
         signup = (Button) findViewById(R.id.btnsignup);
         signin = (Button) findViewById(R.id.btnsignin);
         DB = new DBHelper(this);
+
+        Spinner spinner = findViewById(R.id.spinner_spinner);
+        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this, R.array.cat, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        spinner.setAdapter(adapter);
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String user = username.getText().toString();
                 String pass = password.getText().toString();
                 String repass = repassword.getText().toString();
+
+
 
                 if(user.equals("")||pass.equals("")||repass.equals(""))
                     Toast.makeText(MainActivity.this, "Please enter all the fields", Toast.LENGTH_SHORT).show();

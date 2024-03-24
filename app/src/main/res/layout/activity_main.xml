@@ -1,52 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
     tools:context=".MainActivity">
 
 
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imageFilterView"
+        android:layout_width="435dp"
+        android:layout_height="105dp"
+        android:background="#FF5722"
+        tools:layout_editor_absoluteX="-12dp"
+        tools:layout_editor_absoluteY="-17dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="304dp"
+        android:layout_height="63dp"
+        android:text="vous serez le plus proche du marché du travail"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="114dp"
+        android:layout_height="36dp"
+        android:text="     Email"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="136dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PASSWORD"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="219dp"
+        tools:ignore="MissingConstraints"/>
+
     <EditText
         android:id="@+id/username"
-        android:layout_width="402dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="50dp"
-        android:hint="User Name" />
+        android:layout_width="238dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="116dp"
+        android:hint="email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="402dp"
-        android:layout_height="69dp"
-        android:layout_below="@+id/username"
-        android:layout_marginTop="26dp"
-        android:hint="Password" />
+        android:layout_width="233dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="20dp"
+        android:hint="Password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
 
     <EditText
         android:id="@+id/repassword"
-        android:layout_width="402dp"
-        android:layout_height="71dp"
-        android:layout_below="@+id/password"
-        android:layout_marginTop="24dp"
-        android:hint="Retype Password" />
+        android:layout_width="234dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="20dp"
+        android:hint="Retype Password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="79dp"
+        android:layout_height="41dp"
+        android:text="   ville"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="378dp" />
+
+    <Spinner
+        android:id="@+id/spinner_spinner"
+        android:layout_width="275dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="100dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.674" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="vous etes"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="447dp"
+        tools:ignore="MissingConstraints"/>
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="412dp"
+        android:layout_height="51dp"
+        android:text="candidats cherche du travail et pose cv"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="549dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="399dp"
+        android:layout_height="57dp"
+        android:text="recruteur cherche des cv et pose anoonce de travail"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="476dp" />
 
     <Button
         android:id="@+id/btnsignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="255dp"
         android:text="Register"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/repassword"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repassword" />
 
     <Button
         android:id="@+id/btnsignin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Existing user! Go to Sign in page"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/btnsignup"/>
+        android:layout_below="@+id/btnsignup"
+        android:text="deja inscrit !  Sign in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnsignup" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
