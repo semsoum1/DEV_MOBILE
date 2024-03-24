@@ -1,7 +1,6 @@
 package com.example.monprojet;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import com.example.monprojet.MainActivity2;
 
 
 public class finalpage extends AppCompatActivity {
