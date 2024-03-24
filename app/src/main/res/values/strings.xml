@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">MonProjet</string>
+    <string-array name="ville">
+        <item>agadir</item>
+        <item>casablanca</item>
+        <item>rabat</item>
+        <item>tanger</item>
+        <item>merrakech</item>
+    </string-array>
+    <string-array name="cat">
+        <item>vetement</item>
+        <item>electronique</item>
+        <item>automobile</item>
+        <item>divers</item>
+    </string-array>
+    <string-array name="secteur">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
 </resources>
+
