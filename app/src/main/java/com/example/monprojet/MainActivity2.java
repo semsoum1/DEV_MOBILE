@@ -89,5 +89,9 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}});
 
+                    Intent intent = new Intent(getApplicationContext(), finalpage.class);
+                    startActivity(intent);
+
+
     }
 });}}
